@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraaXSetting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="logo-text">🚀 TraaXSetting</h1>
+            <p class="tagline">Your #1 source for game cheats and mods.</p>
+            <p class="base-url-title">YOUTUBE CHANNEL:</p>
+            <div class="base-url-box">
+                <span class="url-icon">▶️</span>
+                <span id="base-url-text">https://youtube.com/traaxsetting</span>
+                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="premium-call-to-action">
+                <p class="premium-tagline">🔥 Download Tanpa Shortlink? Nikmati Fitur Eksklusif!</p>
+                <a href="buyprem.html" class="premium-button-flash">
+                    DAPATKAN PREMIUM ACCESS SEKARANG!
+                </a>
+            </div>
+            
+            <div class="request-section">
+                <h2 class="request-title">Mau request file?</h2>
+                <p class="request-desc">Punya request file mod atau tool? Kirim pesan anonimmu lewat link NGL di bawah!</p>
+                <a href="https://ngl.link/yourusername" target="_blank" class="request-btn">Kirim Request →</a>
+            </div>
+
+            <div class="filter-nav">
+                <span class="filter-item active" onclick="filterItems('all', this)">All</span>
+                <span class="filter-item" onclick="filterItems('regedit', this)">Regedit</span>
+                <span class="filter-item" onclick="filterItems('antena', this)">Antena</span>
+                <span class="filter-item" onclick="filterItems('esp', this)">ESP</span>
+                <span class="filter-item" onclick="filterItems('line', this)">Line</span>
+                <span class="filter-item" onclick="filterItems('npcname', this)">NPC Name</span>
+                <span class="filter-item" onclick="filterItems('hologram', this)">Hologram</span>
+                <span class="filter-item" onclick="filterItems('ffmod', this)">FF Mod</span>
+                <span class="filter-item" onclick="filterItems('obbffmod', this)">OBB FF Mod</span>
+            </div>
+
+            <h2 class="section-title">Available Downloads</h2>
+
+            <div class="endpoint-grid">
+
+                <div class="endpoint-card" data-category="regedit">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">REGEDIT</h3>
+                    </div>
+                    <p class="endpoint-description">Tools untuk meningkatkan performa dan sensitivitas.</p>
+                    <a href="https://link-download-anda-di-sini.com/regedit" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+
+                <div class="endpoint-card" data-category="antena">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">ANTENA</h3>
+                    </div>
+                    <p class="endpoint-description">Mod untuk melihat lokasi musuh dengan garis antena.</p>
+                    <a href="https://link-download-anda-di-sini.com/antena" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+
+                <div class="endpoint-card" data-category="esp">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">ESP</h3>
+                    </div>
+                    <p class="endpoint-description">Trik untuk melihat posisi, nama, dan info musuh lainnya.</p>
+                    <a href="https://link-download-anda-di-sini.com/esp" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+                
+                <div class="endpoint-card" data-category="line">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">LINE</h3>
+                    </div>
+                    <p class="endpoint-description">Modifikasi visual untuk melacak musuh dengan garis.</p>
+                    <a href="https://link-download-anda-di-sini.com/line" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+                
+                <div class="endpoint-card" data-category="npcname">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">NPC NAME</h3>
+                    </div>
+                    <p class="endpoint-description">Mengubah nama karakter non-playable dalam game.</p>
+                    <a href="https://link-download-anda-di-sini.com/npc-name" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+                
+                <div class="endpoint-card" data-category="hologram">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">HOLOGRAM</h3>
+                    </div>
+                    <p class="endpoint-description">Efek hologram untuk tampilan visual yang unik.</p>
+                    <a href="https://link-download-anda-di-sini.com/hologram" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+
+                <div class="endpoint-card" data-category="ffmod">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">FF MOD</h3>
+                    </div>
+                    <p class="endpoint-description">Modifikasi lengkap untuk game Free Fire.</p>
+                    <a href="https://link-download-anda-di-sini.com/ff-mod" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+
+                <div class="endpoint-card" data-category="obbffmod">
+                    <div class="endpoint-header">
+                        <span class="method-get">GET</span>
+                        <h3 class="endpoint-name">OBB FF MOD</h3>
+                    </div>
+                    <p class="endpoint-description">File OBB modifikasi untuk Free Fire.</p>
+                    <a href="https://link-download-anda-di-sini.com/obb-ff-mod" class="download-link-btn" target="_blank">
+                        Go to Link →
+                    </a>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="site-footer">
+            <div class="social-links">
+                <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube Channel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2A29.8 29.8 0 0 0 12 4s-5.69-.34-10.6-2.4a2.78 2.78 0 0 0-1.94 2A29.8 29.8 0 0 0 4 12c0 1.25-.09 2.5-.24 3.73a2.78 2.78 0 0 0 1.94 2A29.8 29.8 0 0 0 12 20c5.69.34 10.6 2.4 10.6-2.4a2.78 2.78 0 0 0-1.94-2A29.8 29.8 0 0 0 20 12a29.8 29.8 0 0 0-3.46-5.58zM9.75 16.5l6-4.5-6-4.5z"></path></svg>
+                </a>
+                <a href="https://wa.me/yournumber" target="_blank" aria-label="WhatsApp Channel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-whatsapp"><path d="M22 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10z"></path><path d="M17.65 14.35a.5.5 0 0 1-.7-.7l-1.5 1.5-1.5-1.5a.5.5 0 0 1-.7.7l1.5 1.5-1.5 1.5a.5.5 0 0 1 .7.7l1.5-1.5 1.5 1.5a.5.5 0 0 1 .7-.7l-1.5-1.5 1.5-1.5z"></path></svg>
+                </a>
+            </div>
+            <div class="copyright-text">
+                © 2025 TraaXSetting - All rights reserved.
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

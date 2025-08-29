@@ -1,0 +1,326 @@
+:root {
+    --bg-dark: #12141c;
+    --card-bg: #1c1f2b;
+    --text-light: #f1f2f3;
+    --text-muted: #aeb2c3;
+    --accent-blue: #52a6ff;
+    --accent-green: #34c759;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.logo-text {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+}
+
+.tagline {
+    color: var(--text-muted);
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.base-url-title {
+    color: var(--text-light);
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.base-url-box {
+    background-color: var(--card-bg);
+    border: 1px solid #2e3240;
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.url-icon {
+    color: var(--accent-blue);
+}
+
+.copy-button {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: auto;
+}
+
+.copy-button:hover {
+    background-color: #3b8fe8;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Style untuk Filter Navigasi */
+.filter-nav {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    gap: 10px;
+}
+
+/* Menyembunyikan scrollbar */
+.filter-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-item {
+    padding: 8px 15px;
+    background-color: var(--card-bg);
+    border: 1px solid #2e3240;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+}
+
+.filter-item:hover {
+    background-color: #2e3240;
+    color: var(--text-light);
+}
+
+.filter-item.active {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    border-color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.endpoint-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.endpoint-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.endpoint-card.hidden {
+    display: none;
+}
+
+.endpoint-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.method-get {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.endpoint-name {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.endpoint-description {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin: 0 0 15px 0;
+}
+
+.download-link-btn {
+    display: inline-block;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.download-link-btn:hover {
+    background-color: #3b8fe8;
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    padding: 30px 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #2e3240;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+}
+
+.copyright-text {
+    font-size: 0.85em;
+    color: var(--text-muted);
+}
+
+/* --- Bagian Request --- */
+.request-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.request-title {
+    font-size: 1.5em;
+    color: var(--accent-blue);
+    margin: 0 0 10px 0;
+}
+
+.request-title::after {
+    content: none;
+}
+
+.request-desc {
+    color: var(--text-muted);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.request-btn {
+    display: inline-block;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.request-btn:hover {
+    background-color: #3b8fe8;
+}
+
+/* --- Premium Call to Action (Nyentrik) --- */
+.premium-call-to-action {
+    background: linear-gradient(45deg, #ff007f, #ff8c00);
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(255, 0, 127, 0.4);
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.premium-tagline {
+    color: var(--text-light);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.premium-button-flash {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.3em;
+    padding: 15px 35px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.premium-button-flash:hover {
+    background-color: #ffdb4d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Animasi Flash (Kilatan Cahaya) */
+.premium-button-flash::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: left 0.7s ease-in-out;
+    z-index: 0;
+}
+
+.premium-button-flash:hover::before {
+    left: 100%;
+}
