@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+    const overlay = document.getElementById('overlay');
+
     // Fungsi untuk menyalin URL
     window.copyToClipboard = function() {
         const baseUrlText = document.getElementById('base-url-text').innerText;
@@ -14,15 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = document.querySelectorAll('.endpoint-card');
         const filterItems = document.querySelectorAll('.filter-item');
 
-        // Menghapus kelas 'active' dari semua tombol filter
         filterItems.forEach(item => item.classList.remove('active'));
-
-        // Menambahkan kelas 'active' pada tombol yang diklik
         if (element) {
             element.classList.add('active');
         }
 
-        // Menyembunyikan atau menampilkan card
         cards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
             if (category === 'all' || cardCategory === category) {
@@ -30,6 +31,36 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 card.classList.add('hidden');
             }
+        });
+    }
+
+    // Event listener untuk membuka sidebar
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            menuToggle.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Event listener untuk menutup sidebar (tombol silang)
+    if (closeSidebar) {
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+
+    // Event listener untuk menutup sidebar (klik di luar sidebar)
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.style.overflow = '';
         });
     }
 

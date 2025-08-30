@@ -14,14 +14,40 @@
     <div class="container">
         <header class="header">
             <h1 class="logo-text">🚀 TraaXSetting</h1>
-            <p class="tagline">Your #1 source for game cheats and mods.</p>
-            <p class="base-url-title">YOUTUBE CHANNEL:</p>
-            <div class="base-url-box">
-                <span class="url-icon">▶️</span>
-                <span id="base-url-text">https://youtube.com/traaxsetting</span>
-                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </header>
+
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeSidebar" aria-label="Close navigation menu">×</button>
+            <nav class="sidebar-nav">
+                <a href="https://youtube.com/traaxsetting" target="_blank" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2A29.8 29.8 0 0 0 12 4s-5.69-.34-10.6-2.4a2.78 2.78 0 0 0-1.94 2A29.8 29.8 0 0 0 4 12c0 1.25-.09 2.5-.24 3.73a2.78 2.78 0 0 0 1.94 2A29.8 29.8 0 0 0 12 20c5.69.34 10.6 2.4 10.6-2.4a2.78 2.78 0 0 0-1.94-2A29.8 29.8 0 0 0 20 12a29.8 29.8 0 0 0-3.46-5.58zM9.75 16.5l6-4.5-6-4.5z"></path></svg>
+                    YouTube Channel
+                </a>
+                <a href="https://wa.me/yournumber" target="_blank" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-whatsapp"><path d="M22 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10z"></path><path d="M17.65 14.35a.5.5 0 0 1-.7-.7l-1.5 1.5-1.5-1.5a.5.5 0 0 1-.7.7l1.5 1.5-1.5 1.5a.5.5 0 0 1 .7.7l1.5-1.5 1.5 1.5a.5.5 0 0 1 .7-.7l-1.5-1.5 1.5-1.5z"></path></svg>
+                    WhatsApp Support
+                </a>
+                <a href="https://website-mod-lain.com" target="_blank" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Website Mod Lain
+                </a>
+            </nav>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <p class="tagline">Your #1 source for game cheats and mods.</p>
+        <p class="base-url-title">YOUTUBE CHANNEL:</p>
+        <div class="base-url-box">
+            <span class="url-icon">▶️</span>
+            <span id="base-url-text">https://youtube.com/traaxsetting</span>
+            <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+        </div>
 
         <main class="main-content">
             <div class="premium-call-to-action">
@@ -39,7 +65,7 @@
 
             <div class="filter-nav">
                 <span class="filter-item active" onclick="filterItems('all', this)">All</span>
-                <span class="filter-item active" onclick="filterItems('config', this)">Config</span>
+                <span class="filter-item" onclick="filterItems('config', this)">Config</span>
                 <span class="filter-item" onclick="filterItems('regedit', this)">Regedit</span>
                 <span class="filter-item" onclick="filterItems('antena', this)">Antena</span>
                 <span class="filter-item" onclick="filterItems('esp', this)">ESP Line</span>
